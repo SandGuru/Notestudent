@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@color/background"
+    tools:context=".FragmentRegister">
+
+    <TextView
+        android:id="@+id/test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:padding="25dp"
+        android:layout_marginTop="100dp"
+        android:scrollbars="none">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="4dp"
+
+                android:padding="30dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/rounded_corner_view"
+                android:padding="25dp">
+
+                <TextView
+                    android:id="@+id/stepTextTitleData"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Registra tus datos personales"
+                    android:textColor="@color/title_color"
+                    android:textSize="35sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/background" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:focusableInTouchMode="true"
+                    android:orientation="vertical">
+
+                    # INPUT PARA DOCUMENTO
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:background="@color/background"
+                        android:textColorHint="@color/font_color">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/textDNI"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/background"
+                            android:inputType="number"
+                            android:textColor="#fff"
+                            android:hint="Documento"
+                            android:padding="15dp"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    # INPUT PARA NOMBRE
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@color/background"
+                        android:textColorHint="@color/font_color">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/textName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/background"
+                            android:textColor="#fff"
+                            android:hint="Nombre completo"
+                            android:padding="15dp"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    # INPUT PARA EDAD
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@color/background"
+                        android:textColorHint="@color/font_color">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/textAge"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/background"
+                            android:textColor="#fff"
+                            android:hint="Edad"
+                            android:padding="15dp"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    #INPUT PARA TELÉFONO
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@color/background"
+                        android:textColorHint="@color/font_color">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/textPhoneNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/background"
+                            android:inputType="phone"
+                            android:textColor="#fff"
+                            android:hint="Teléfono"
+                            android:padding="15dp"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    # INPUT PARA DIRECCIÓN
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@color/background"
+                        android:textColorHint="@color/font_color">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/textAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/background"
+                            android:textColor="#fff"
+                            android:hint="Dirección"
+                            android:padding="15dp"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                #STUDENT ACADEMIC DATA
+                <TextView
+                    android:id="@+id/stepTextTitleAcademic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:text="Registra tus datos académicos"
+                    android:textColor="@color/title_color"
+                    android:textSize="35sp"
+                    android:textStyle="bold"/>
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/background" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    # INPUT PARA MATERIA 1
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_weight="2"
+                        android:background="@color/background"
+                        android:textColorHint="@color/font_color">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/textSubject1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/background"
+                            android:hint="Materia 1"
+                            android:inputType="text"
+                            android:padding="15dp"
+                            android:textColor="#fff" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    # INPUT PARA NOTA 1
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:layout_weight="3"
+                        android:background="@color/background"
+                        android:textColorHint="@color/font_color">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/textNote1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/background"
+                            android:hint="Nota 1"
+                            android:inputType="numberDecimal"
+                            android:padding="15dp"
+                            android:textColor="#fff" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    # INPUT PARA MATERIA 2
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:layout_weight="2"
+                        android:layout_marginRight="30dp"
+                        android:background="@color/background"
+                        android:textColorHint="@color/font_color">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/textSubject2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/background"
+                            android:inputType="text"
+                            android:textColor="#fff"
+                            android:hint="Materia 2"
+                            android:padding="15dp"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    # INPUT PARA NOTA 2
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:background="@color/background"
+                        android:layout_weight="3"
+                        android:textColorHint="@color/font_color">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/textNote2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/background"
+                            android:inputType="numberDecimal"
+                            android:textColor="#fff"
+                            android:hint="Nota 2"
+                            android:padding="15dp"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    # INPUT PARA MATERIA 3
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:layout_weight="2"
+                        android:layout_marginRight="30dp"
+                        android:background="@color/background"
+                        android:textColorHint="@color/font_color">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/textSubject3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/background"
+                            android:inputType="text"
+                            android:textColor="#fff"
+                            android:hint="Materia 3"
+                            android:padding="15dp"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    # INPUT PARA NOTA 3
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:background="@color/background"
+                        android:layout_weight="3"
+                        android:textColorHint="@color/font_color">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/textNote3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/background"
+                            android:inputType="numberDecimal"
+                            android:textColor="#fff"
+                            android:hint="Nota 3"
+                            android:padding="15dp"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    # INPUT PARA MATERIA 4
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:layout_weight="2"
+                        android:layout_marginRight="30dp"
+                        android:background="@color/background"
+                        android:textColorHint="@color/font_color">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/textSubject4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/background"
+                            android:inputType="text"
+                            android:textColor="#fff"
+                            android:hint="Materia 4"
+                            android:padding="15dp"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    # INPUT PARA NOTA 4
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:background="@color/background"
+                        android:layout_weight="3"
+                        android:textColorHint="@color/font_color">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/textNote4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/background"
+                            android:inputType="numberDecimal"
+                            android:textColor="#fff"
+                            android:hint="Nota 4"
+                            android:padding="15dp"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    # INPUT PARA MATERIA 5
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:layout_weight="2"
+                        android:layout_marginRight="30dp"
+                        android:background="@color/background"
+                        android:textColorHint="@color/font_color">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/textSubject5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/background"
+                            android:inputType="text"
+                            android:textColor="#fff"
+                            android:hint="Materia 5"
+                            android:padding="15dp"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    # INPUT PARA NOTA 5
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:background="@color/background"
+                        android:layout_weight="3"
+                        android:textColorHint="@color/font_color">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/textNote5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/background"
+                            android:inputType="numberDecimal"
+                            android:textColor="#fff"
+                            android:hint="Nota 5"
+                            android:padding="15dp"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+                <Button
+                    android:id="@+id/submit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:text="Registrar"
+                    android:textColor="@color/title_color"
+                    android:backgroundTint="@color/secondary_color"/>
+
+            </LinearLayout>
+    </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
+
+

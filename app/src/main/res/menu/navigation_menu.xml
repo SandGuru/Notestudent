@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/fragmentHome"
+        android:icon="@drawable/ic_home"
+        android:title="Inicio"/>
+
+    <item
+        android:id="@+id/fragmentRegister"
+        android:icon="@drawable/ic_register"
+        android:title="Registrar"/>
+
+    <item
+        android:id="@+id/fragmentStats"
+        android:icon="@drawable/ic_stats"
+        android:title="Estadísticas" />
+
+    <item
+        android:id="@+id/fragmentHelp"
+        android:icon="@drawable/ic_help"
+        android:title="Ayuda" />
+</menu>
