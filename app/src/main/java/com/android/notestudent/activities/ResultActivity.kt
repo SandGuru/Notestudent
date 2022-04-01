@@ -49,6 +49,7 @@ class ResultActivity : AppCompatActivity() {
     var note5Value: Double? = null
 
     var averageValue: Double? = null
+    var averageD: Double? = null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -68,8 +69,8 @@ class ResultActivity : AppCompatActivity() {
 
     private fun showStudentResults() {
         try{
-            var student = Functions.getOne(dniValue)
-            //var average = Functions.calcAverage(student!!)
+            //var student = Functions.getOne(dniValue)
+            //var average = Functions.calcAverage(student)
 
             var bundle: Bundle? = this.intent.extras
             dniValue = bundle?.getString("dni")
@@ -91,6 +92,7 @@ class ResultActivity : AppCompatActivity() {
             note5Value = bundle?.getDouble("note5")
 
             averageValue = bundle?.getDouble("average")
+            averageD = bundle?.getDouble("average")
 
 
             //SETTING VALUES ON TEXTVIEWS
@@ -114,15 +116,15 @@ class ResultActivity : AppCompatActivity() {
 
             this.average?.text = averageValue.toString()
 
-            /*if (average > 3.5) {
-                status?.text = "Gana el periodo"
+            if (averageD!! > 3.5) {
+                status?.text = "¡Has aprobado!"
             }
-            else if (average > 2.5){
-                status?.text = "Pierde con posibilidad de recuperacion"
+            else if (averageD!! > 2.5){
+                status?.text = "Has perdido pero... ¡Puedes recuperar!"
             } else
             {
-                status?.text = "Perdio el periodo"
-            }*/
+                status?.text = "Oh no, has reprobado"
+            }
 
         }
         catch (e: Exception) {

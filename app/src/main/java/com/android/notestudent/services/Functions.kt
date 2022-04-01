@@ -13,8 +13,7 @@ class Functions {
         }
 
         fun calcAverage(student: Student): Double {
-
-            var average = (student?.note1+student.note2+student.note3+student.note4+student.note5)/5
+            var average = (student.note1 + student.note2 + student.note3 + student.note4 + student.note5)/5
 
             return average
         }

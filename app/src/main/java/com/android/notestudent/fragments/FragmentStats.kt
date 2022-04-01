@@ -46,11 +46,11 @@ class FragmentStats : Fragment() {
     fun showStats() {
         for (student: Student in Functions.getAll()) {
             var average = Functions.calcAverage(student)
-            if (average > 36 && average < 50) {
+            if (average > 3.6 && average < 5.0) {
                 statistics["approvedStudents"] = statistics["approvedStudents"]!!.plus(1)
-            } else if(average > 25 && average < 36) {
+            } else if(average > 2.5 && average < 3.6) {
                 statistics["opportune"] = statistics["opportune"]!!.plus(1)
-            } else if(average > 0 && average < 25){
+            } else if(average > 0 && average < 2.5){
                 statistics["reprovedStudents"] = statistics["reprovedStudents"]!!.plus(1)
             }
         }

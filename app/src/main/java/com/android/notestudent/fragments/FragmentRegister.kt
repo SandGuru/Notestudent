@@ -9,6 +9,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import kotlin.jvm.functions.FunctionN
 
 class FragmentRegister : Fragment() {
     var dni: EditText? = null
@@ -74,7 +75,6 @@ class FragmentRegister : Fragment() {
     private fun onSubmit() {
         try {
             val student = initStudentData()
-
             var notes = arrayListOf(student.note1, student.note2, student.note3, student.note4, student.note5)
 
             //Validación de que la nota esté en el rango aceptado.
